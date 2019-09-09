@@ -70,6 +70,7 @@ class App extends React.Component {
       <div className='App'>
         <h1>Get Newark Airport arrivals by hour</h1>
         <p>24 hour time</p>
+        <p>Refresh page for latest updates</p>
 
         <MyChart stateData={this.state.data} />
       </div>
