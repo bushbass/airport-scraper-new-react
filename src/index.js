@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import axios from "axios";
-import cheerio from "cheerio";
-import MyChart from "./MyChart";
-import { convertTime12to24 } from "./convertTime12to24";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
+import cheerio from 'cheerio';
+import MyChart from './MyChart';
+import { convertTime12to24 } from './convertTime12to24';
 
-import "./styles.css";
+import './styles.css';
 
 class App extends React.Component {
   constructor() {
@@ -28,12 +28,12 @@ class App extends React.Component {
   // takes the html from getHTML function and manipulates it to produce our object
   async getArrivalTimes(html) {
     const $ = cheerio.load(html);
+
     // get flight times from cheerio object and save them to flightArray
-    const rawFlightTimesList = [];
-    $(".c7").each((i, element) => {
-      element.children[1]
-        ? rawFlightTimesList.push(element.children[1].data)
-        : null;
+    let rawFlightTimesList = [];
+    $('.c7').each((i, element) => {
+      let temp = element.children[1] ? element.children[1].data : null;
+      rawFlightTimesList = [...rawFlightTimesList, temp];
     });
 
     //remove duplicate times by making it a set
@@ -67,7 +67,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <h1>Get Newark Airport arrivals by hour</h1>
         <p>24 hour time</p>
 
@@ -77,5 +77,5 @@ class App extends React.Component {
   }
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
