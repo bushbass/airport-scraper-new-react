@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactChartkick, { BarChart } from 'react-chartkick';
-import { Chart, registerables } from 'chart.js';
-Chart.register(...registerables);
+import Chart from 'chart.js/auto';
 
 ReactChartkick.addAdapter(Chart);
 
