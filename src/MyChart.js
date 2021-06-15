@@ -1,8 +1,7 @@
 import React from 'react';
-// import ReactChartkick, { BarChart } from 'react-chartkick';
-import Chart from 'chart.js/auto';
 import { BarChart } from 'react-chartkick';
 import 'chartkick/chart.js';
+import Chart from 'chart.js/auto';
 
 ReactChartkick.addAdapter(Chart);
 
