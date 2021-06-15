@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactChartkick, { BarChart } from 'react-chartkick';
-import { Chart } from 'chart.js';
+import { Chart, LinearScale } from 'chart.js';
 
 ReactChartkick.addAdapter(Chart);
 
