@@ -3,7 +3,7 @@ import { BarChart } from 'react-chartkick';
 import 'chartkick/chart.js';
 import Chart from 'chart.js/auto';
 
-ReactChartkick.addAdapter(Chart);
+// ReactChartkick.addAdapter(Chart);
 
 function makeArray(obj) {
   const newArray = [];
