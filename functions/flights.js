@@ -7,6 +7,6 @@ exports.handler = async (event) => {
 
   return {
     statusCode: 200,
-    body: `Hello ${response.data}!`,
+    body: response.data,
   };
 };
