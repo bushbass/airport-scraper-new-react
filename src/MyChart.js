@@ -12,7 +12,9 @@ function makeArray(obj) {
 }
 
 const MyChart = (props) => {
-  return <BarChart data={makeArray(props.stateData)} />;
+  return (
+    <BarChart type="bar" indexAxis="y" data={makeArray(props.stateData)} />
+  );
 };
 
 export default MyChart;
