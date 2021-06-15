@@ -1,6 +1,6 @@
 import axios from 'axios';
 const url =
-  'https://cors-alex.herokuapp.com/https://tracker.flightview.com/FVAccess3/tools/fids/fidsDefault.asp?ffState=2&accCustId=PANYNJ&fidsId=20001&ffId=fA&ffAcid=&ffAl=&ffSimplestatus=&ffDepap=&ffArrap=EWR&ffDepdate=&ffArrdate=NOW&ffDephr=&ffArrhr=NOW&ffSortColumn=ArrivalDateTimeUpdated&ffSortDirection=ascending&ffSortPrevColumn=ArrivalOriginalDateTimeScheduled&ffSortPrevDirection=ascending&ffFilterAl=&ffFilterDepap=&ffFilterArrap=';
+  'https://boring-wright-90b6b0.netlify.app/.netlify/functions/flights';
 
 // gets the raw HTML from the website via axios
 export const getHTML = async () => {
